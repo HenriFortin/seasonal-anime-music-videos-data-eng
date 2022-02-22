@@ -1,0 +1,18 @@
+doctype html 
+html 
+    head 
+        title YoutubeData 
+    body 
+        h1 Last7DaysGrowth
+
+        for elem in rows 
+            div.container
+               div.link
+                    a(href='/Anime/'+elem.AnimeId) #{elem.AnimeName}
+               div.link 
+                    a(href='/Video/'+elem.VideoId) #{elem.VideoTitle}
+               iframe(width='660', height='371', src=elem.VideoEmbed, allowfullscreen='true')
+               div.stats 
+                    a(href='/Channel/'+elem.ChannelId)  #{elem.ChannelTitle}
+                    p Growth: #{elem.ViewGrowth} %
+                    p from #{elem.InitialViewCount} to #{elem.FinalViewCount} views

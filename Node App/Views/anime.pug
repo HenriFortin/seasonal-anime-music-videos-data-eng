@@ -1,0 +1,34 @@
+doctype html 
+html 
+    head 
+        title YoutubeData 
+    body 
+        -if(rows.length)
+            h1 #{rows[0].AnimeName}
+
+            ol
+            for elem in rows 
+                 li <img src=https://i.ytimg.com/vi/#{elem.VideoId}/hqdefault.jpg>
+                    <div>
+                        <a href=#{elem.VideoURL}> #{elem.VideoTitle}</a> 
+                        Channel: #{elem.ChannelTitle} Views: #{elem.ViewCount} 
+                    </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        -else
+            h1 there seem to be a problem

@@ -1,0 +1,14 @@
+doctype html 
+html 
+    head 
+        title YoutubeData 
+    body 
+        -if(rows.length)
+            h1 Categories
+
+            ol
+            for elem in rows 
+                 li <div><a href=/Category/#{elem.VideoCategoryId}> #{elem.VideoCategoryName}</a></div>
+
+        -else
+            h1 there seem to be a problem
